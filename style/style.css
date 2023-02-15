@@ -1,0 +1,52 @@
+html{
+    width: 99%;
+    height: 99%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    height: 99%;
+}
+
+label{
+    display: inline-block;
+    border-radius: 50px;
+    height: 100px;
+    width: 200px;
+    background-color: gray;
+    position: relative;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+label::before{
+
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    bottom: 10;
+    left: 10px;
+    content: "";
+    transition: all 0.3s linear;
+    border-radius: 50%;
+}
+
+input:checked + label{
+    background-color: greenyellow;
+}
+
+input:checked + label::before{
+    transform: translateX(100px);
+}
+
+input{
+    display: none;
+}
