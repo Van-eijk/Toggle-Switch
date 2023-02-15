@@ -50,3 +50,13 @@ input:checked + label::before{
 input{
     display: none;
 }
+
+p{
+    margin: 10px 0px;
+    padding: 0px 0px;
+}
+
+img{
+    height: 250px;
+    width: 150px;
+}

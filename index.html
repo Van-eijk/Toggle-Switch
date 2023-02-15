@@ -9,9 +9,33 @@
 </head>
 <body>
     <h1>Toggle switch</h1>
+    <p><img id="lamp" src="pictures/AmpouleOFF.png" alt=""></p>
 
     <input type="checkbox" name="" id="toggle">
-    <label for="toggle"></label>
+    <label for="toggle" id="labelClick" onclick="onLamp()"></label>
+
+
+    <script>
+
+        let powerLamp = false ;
+
+        function onLamp(){
+
+            if(powerLamp == false){
+                document.getElementById("lamp").setAttribute("src","pictures/AmpouleON.png");
+                powerLamp = true ;
+            }
+            else{
+
+                document.getElementById("lamp").setAttribute("src","pictures/AmpouleOFF.png");
+                powerLamp = false ;
+
+            }
+
+
+        }
+
+    </script>
     
 </body>
 </html>
