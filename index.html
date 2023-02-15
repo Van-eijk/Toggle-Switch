@@ -12,16 +12,17 @@
     <p><img id="lamp" src="pictures/AmpouleOFF.png" alt=""></p>
 
     <input type="checkbox" name="" id="toggle">
-    <label for="toggle" id="labelClick" onclick="onLamp()"></label>
+    <label for="toggle" id="labelClick"></label>
 
 
     <script>
 
         let powerLamp = false ;
 
-        function onLamp(){
+        // on exécute la fonction après chaque 0,5 ms jusqu'à l'infini
 
-            if(powerLamp == false){
+        setInterval(function(){
+            if(document.getElementById("toggle").checked == true){
                 document.getElementById("lamp").setAttribute("src","pictures/AmpouleON.png");
                 powerLamp = true ;
             }
@@ -29,11 +30,8 @@
 
                 document.getElementById("lamp").setAttribute("src","pictures/AmpouleOFF.png");
                 powerLamp = false ;
-
             }
-
-
-        }
+        }, 0.5)
 
     </script>
     
